@@ -1,0 +1,22 @@
+.ToDoCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  div {
+    padding: 20px;
+    border: 3px solid lightgreen;
+    background-color: greenyellow;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  div:hover {
+    background-color: white;
+  }
+}
