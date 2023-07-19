@@ -1,18 +1,17 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
 import React from "react"
-import Todo from "@/components/todocard/ToDoCard"
-
+import ToDoList from '@/components/todolist'
 
 import { useReducer } from "react";
-import { MainContext } from "../states";
-import { initialState } from "../states";
+import { MainContext } from "@/states/";
+import { initialState } from "@/states";
 import { mainReducer } from "@/states/reducers";
 import Navbar from '@/components/navbar/Navbar';
 
 
 
-export default function Home({ }) {
+export default function Home() {
   const [state, dispatch] = useReducer(mainReducer, initialState);
 
   return (
@@ -26,7 +25,7 @@ export default function Home({ }) {
       <MainContext.Provider value={{ state, dispatch }}>
         <main className={`${styles.Home}`}>
           <Navbar />
-          <Todo />
+          <ToDoList />
         </main>
       </MainContext.Provider>
     </>
