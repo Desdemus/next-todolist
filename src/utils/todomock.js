@@ -1,184 +1,182 @@
-const todomock = [
+export const todomock = [
     {
         id: 1,
         todo: "Do something nice for someone I care about",
-        completed: "true",
+        completed: true,
         user: 26
     },
     {
         id: 2,
         todo: "Memorize the fifty states and their capitals",
-        completed: "false",
+        completed: false,
         user: 48
     },
     {
         id: 3,
         todo: "Watch a classic movie",
-        completed: "false",
+        completed: false,
         user: 4
     },
     {
         id: 4,
         todo: "Contribute code or a monetary donation to an open-source software project",
-        completed: "false",
+        completed: false,
         user: 48
     },
     {
         id: 5,
         todo: "Solve a Rubik's cube",
-        completed: "false",
+        completed: false,
         user: 31
     },
     {
         id: 6,
         todo: "Bake pastries for me and neighbor",
-        completed: "false",
+        completed: false,
         user: 39
     },
     {
         id: 7,
         todo: "Go see a Broadway production",
-        completed: "false",
+        completed: false,
         user: 32
     },
     {
         id: 8,
         todo: "Write a thank you letter to an influential person in my life",
-        completed: "true",
+        completed: true,
         user: 13
     },
     {
         id: 9,
         todo: "Invite some friends over for a game night",
-        completed: "false",
+        completed: false,
         user: 47
     },
     {
         id: 10,
         todo: "Have a football scrimmage with some friends",
-        completed: "false",
+        completed: false,
         user: 19
     },
     {
         id: 11,
         todo: "Text a friend I haven't talked to in a long time",
-        completed: "false",
+        completed: false,
         user: 39
     },
     {
         id: 12,
         todo: "Organize pantry",
-        completed: "true",
+        completed: true,
         user: 39
     },
     {
         id: 13,
         todo: "Buy a new house decoration",
-        completed: "false",
+        completed: false,
         user: 16
     },
     {
         id: 14,
         todo: "Plan a vacation I've always wanted to take",
-        completed: "false",
+        completed: false,
         user: 28
     },
     {
         id: 15,
         todo: "Clean out car",
-        completed: "false",
+        completed: false,
         user: 33
     },
     {
         id: 16,
         todo: "Draw and color a Mandala",
-        completed: "true",
+        completed: true,
         user: 24
     },
     {
         id: 17,
         todo: "Create a cookbook with favorite recipes",
-        completed: "false",
+        completed: false,
         user: 1
     },
     {
         id: 18,
         todo: "Bake a pie with some friends",
-        completed: "false",
+        completed: false,
         user: 1
     },
     {
         id: 19,
         todo: "Create a compost pile",
-        completed: "true",
+        completed: true,
         user: 5
     },
     {
         id: 20,
         todo: "Take a hike at a local park",
-        completed: "true",
+        completed: true,
         user: 43
     },
     {
         id: 21,
         todo: "Take a class at local community center that interests you",
-        completed: "false",
+        completed: false,
         user: 22
     },
     {
         id: 22,
         todo: "Research a topic interested in",
-        completed: "false",
+        completed: false,
         user: 4
     },
     {
         id: 23,
         todo: "Plan a trip to another country",
-        completed: "true",
+        completed: true,
         user: 37
     },
     {
         id: 24,
         todo: "Improve touch typing",
-        completed: "false",
+        completed: false,
         user: 45
     },
     {
         id: 25,
         todo: "Learn Express.js",
-        completed: "false",
+        completed: false,
         user: 49
     },
     {
         id: 26,
         todo: "Learn calligraphy",
-        completed: "false",
+        completed: false,
         user: 50
     },
     {
         id: 27,
         todo: "Have a photo session with some friends",
-        completed: "false",
+        completed: false,
         userId: 14
     },
     {
         id: 28,
         todo: "Go to the gym",
-        completed: "false",
+        completed: false,
         userId: 15
     },
     {
         id: 29,
         todo: "Make own LEGO creation",
-        completed: "false",
+        completed: false,
         userId: 30
     },
     {
         id: 30,
         todo: "Take cat on a walk",
-        completed: "false",
+        completed: false,
         userId: 15
     }
 ]
-
-export default todomock
