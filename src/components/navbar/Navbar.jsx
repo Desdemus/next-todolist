@@ -1,39 +1,34 @@
 import { useState, useContext } from "react";
 import { MainContext } from "@/states";
 import styles from "./index.module.scss";
+import { auth } from "@/utils/firebase";
+import { provider } from "@/utils/firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Navbar = () => {
     const { state, dispatch } = useContext(MainContext);
     const [inputUsername, setInputUsername] = useState("");
 
-    const onHandleLogout = () => {
-        dispatch({ type: "SET_LOGOUT" });
-    };
-
-    const onHandleLogin = () => {
-        dispatch({ type: "SET_LOGIN" });
-    };
-
-    const onHandleInputUsername = (e) => setInputUsername(e.target.value);
 
     const onHandleSubmit = (e) => {
         e.preventDefault();
         dispatch({ type: "SET_USERNAME", payload: inputUsername });
         setInputUsername("");
     };
+    const onHandleGoogleLogin = async () => {
+        const res = await signInWithPopup(auth, provider)
+        setInputUsername(res.user.email)
+    }
+
+
+
+
 
     return (
         <div className={styles.Navbar}>
-            <strong onClick={state?.isLogged ? onHandleLogout : onHandleLogin}>
-                {state?.isLogged ? state.username : "Premi per collegarti"}
-            </strong>
+            <button onClick={onHandleGoogleLogin}>Accedi con Google</button>
+            <h5>{inputUsername}</h5>
             <form onSubmit={onHandleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Inserisci username"
-                    value={inputUsername}
-                    onChange={onHandleInputUsername}
-                />
             </form>
         </div>
     );

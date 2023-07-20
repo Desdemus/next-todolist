@@ -3,6 +3,9 @@ import styles from '@/styles/Home.module.scss'
 import React from "react"
 import ToDoList from '@/components/todolist'
 
+import { db } from "../utils/firebase";
+import { collection, getDocs } from "firebase/firestore";
+
 import { useReducer } from "react";
 import { MainContext } from "@/states/";
 import { initialState } from "@/states";
@@ -30,4 +33,19 @@ export default function Home() {
       </MainContext.Provider>
     </>
   )
+}
+export async function getServerSideProps(context) {
+  const data = [];
+  const querySnapshot = await getDocs(collection(db, "todos-list"));
+
+
+  querySnapshot.forEach((doc) => {
+    data.push({ ...doc.data(), id: doc.id });
+  });
+  console.log(data)
+  return {
+    props: {
+      data,
+    },
+  };
 }
